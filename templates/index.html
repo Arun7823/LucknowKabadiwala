@@ -1,0 +1,724 @@
+{% extends 'base.html' %}
+{% block content %}
+<!-- slider section -->
+    <section class=" slider_section position-relative" >
+      <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="slider_item-box">
+              <div class="slider_item-container">
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="offset-md-2 col-md-4">
+                      <div class="slider_item-detail">
+                        <div>
+                          <h2 class="slider_heading">
+                            50% OFF <br />
+                            First order
+                          </h2>
+                          <p>
+                             Ut enim ad minim veniam,
+                            quis nostrud exercitation ullamco laboris nis
+                          </p>
+                          <div class="d-flex">
+                            <a href="{% url 'contact' %}" class="slider_btn">
+                              Order Now
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="hero_img-box">
+                        <img src="/static/images/bann.png" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="slider_item-box">
+              <div class="slider_item-container">
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="offset-md-2 col-md-4">
+                      <div class="slider_item-detail">
+                        <div>
+                          <h2 class="slider_heading">
+                            50% OFF <br />
+                            First order
+                          </h2>
+                          <p>
+                            inim veniam,
+                            quis nostrud exercitation ullamco laboris nis
+                          </p>
+                          <div class="d-flex">
+                            <a href="{% url 'contact' %}" class="slider_btn">
+                              Order Now
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="hero_img-box">
+                        <img src="/static/images/banner.png" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="slider_item-box">
+              <div class="slider_item-container">
+                <div class="container-fluid">
+                  <div class="row">
+                    <div class="offset-md-2 col-md-4">
+                      <div class="slider_item-detail">
+                        <div>
+                          <h2 class="slider_heading">
+                            Looking For Cash ?  <br />
+                            Sell Your Trash
+                          </h2>
+                          <p>
+                            m ad minim veniam,
+                            quis nostrud exercitation ullamco laboris nis
+                          </p>
+                          <div class="d-flex">
+                            
+                            <a href="{% url 'contact' %}" class="slider_btn">
+                              Order Now
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="hero_img-box">
+                        <img src="/static/images/hero.png" alt="" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- end slider section -->
+  </div>
+
+  <!-- detail section -->
+  <section class="detail_section">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-3">
+          <div class="detail_img-box">
+            <img src="/static/images/detail.png" alt="" class="w-100" />
+          </div>
+        </div>
+        <div class=" col-lg-7">
+          <div class="detail_container">
+            <div class="detail-box d-box-1">
+              <a href="{% url 'contact' %}">
+                <div class="detail-content">
+                  <img src="/static/images/book.png" alt="" />
+                  <h5>
+                    <b>Book By Web</b>
+                  </h5>
+                </div>
+              </a>
+            </div>
+            <div class="detail-box d-box-2">
+              <a href="">
+                <div class="detail-content">
+                  <img src="/static/images/time.png" alt="" />
+                  <h5>
+                    <b>Time & Money</b>
+                  </h5>
+                </div>
+              </a>
+            </div>
+            <div class="detail-box d-box-3">
+              <a href="">
+                <div class="detail-content">
+                  <img src="/static/images/conttribution.png" alt="" />
+                  <h5>
+                    <b>Contribution</b>
+                  </h5>
+                </div>
+              </a>
+            </div>
+            <div class="detail-box d-box-4">
+              <a href="">
+                <div class="detail-content">
+                  <img src="/static/images/verify.png" alt="" />
+                  <h5>
+                    <b>Pickup Boy</b>
+                  </h5>
+                </div>
+              </a>
+            </div>
+          </div>
+          
+        </div>
+        
+      </div>
+      
+    </div>
+    
+  </section>
+  <!-- end detail section -->
+
+  <!-- Scrap products section -->
+  <section class="products_section">
+    <div class="heading_container">
+      <h2>
+        Scrap Store
+      </h2>
+      <p>
+        Price Card
+      </p>
+    </div>
+  
+    
+    <div class="container layout_padding">
+      <div class="product_container">
+        {% for n in productData %}
+        <a >
+          
+          <div class="product_box">
+            
+            <div class="product_img-box">
+              <img src="/media/{{n.product_img}}" alt="" />
+              
+            </div>
+            <div class="product_detail-box">
+              <span style="color: black;" ><b>{{n.product_name}}</b></span>
+              </div>
+              <span style="color: #04771d;">
+                <b>{{ n.product_price }}</b>
+                
+              </span>
+              
+              
+          </div>
+          
+        </a>
+        {% empty %}
+              No Record Found
+        {%  endfor  %}
+        
+        
+      </div>
+      
+        
+    
+    
+    </div>
+    
+        <button class="btnn"><a href="{% url 'price' %}"  style="color:black"><b>View More</b></a></button>
+    
+    
+    </div>
+    
+  </section>
+<br>
+<br>
+  <!-- end Scrap products section -->
+  <!-- Plant products section -->
+  <section class="products_section">
+    <div class="heading_container">
+      <h2>
+        Plant Store
+      </h2>
+      <p>
+        Price Card
+      </p>
+    </div>
+  
+    
+    <div class="container layout_padding">
+      <div class="product_container">
+      
+        <a >
+          
+          <div class="product_box">
+            
+            <div class="product_img-box">
+              <img src="\media\plant\lucky.jpg" alt="" />
+              
+            </div>
+            <div class="product_detail-box">
+              <span style="color: Green;" ><b>2 Layer Lucky Bamboo Plant in a Bowl with Pebbles – with Pot</b></span>
+              </div>
+              <span style="color: #006400	;">
+               <h5> <b>₹ 299</b></h5>
+                
+              </span>
+              
+              
+          </div>
+          
+        </a>
+        
+        
+        <a >
+          
+          <div class="product_box">
+            
+            <div class="product_img-box">
+              <img src="\media\plant\Aglaonema.jpg" alt="" />
+              
+            </div>
+            <div class="product_detail-box">
+              <span style="color: Green;" ><b>Aglaonema Lady Valentine- with Pot</b></span>
+              </div>
+              <span style="color: #006400	;">
+                <h5><b>₹ 429</b></h5>
+                
+              </span>
+              
+              
+          </div>
+          
+        </a>
+
+        
+        <a >
+          
+          <div class="product_box">
+            
+            <div class="product_img-box">
+              <img src="\media\plant\Anthurium.jpg" alt="" />
+              
+            </div>
+            <div class="product_detail-box">
+              <span style="color: Green;" ><b>Anthurium Red Plant – With Pot</b></span>
+              </div>
+              <span style="color: #006400	;">
+               <h5> <b>₹ 599</b></h5>
+                
+              </span>
+              
+              
+          </div>
+          
+        </a>
+        
+      </div>
+      
+        
+    
+    
+    </div>
+    <br>
+    
+        <button class="btnn"><a href="http://www.greenspace.com"  style="color:black"><b>View More</b></a></button>
+    
+    
+    </div>
+    
+  </section>
+  <!-- end plant products section -->
+
+  <!-- find section -->
+  <section class="find_section layout_padding-bottom">
+    <div class="container-fluid">
+      <h2>
+        <b>How it work</b>
+      </h2>
+      <div class="row">
+        <div class="col-lg-6 col-md-8 offset-md-2">
+          <div class="find_container">
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="find_container-img">
+                  <img src="/static/images/scrap.png" alt="" />
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <h3>
+                  Sell Everything <br />
+                  
+                </h3>
+                <p>
+                  <b>just one click</b>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="shop_container">
+            <div class="row">
+              <div class="col-sm-6">
+                
+                <h3>
+                  More Trash
+                </h3>
+                <p>
+                 <b> More Cash</b>
+                </p>
+              </div>
+              <div class="col-sm-6">
+                <div class="shoe_img-box">
+                  <img src="/static/images/cash.png" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          
+        </div>
+        <div class="col-md-4">
+          <div class="find_img-box">
+            <img src="/static/images/find-hero.png" alt="" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end find section -->
+
+<!-- Start Why Lucknow Kabadiwala section -->
+<section class="find_section layout_padding-bottom">
+  <div class="container-fluid">
+    <h2>
+      <b>Why Lucknow Kabadiwala</b>
+    </h2>
+    <div class="row">
+      <div class="col-lg-6 col-md-8 offset-md-2">
+        <div class="find_container">
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="find_container-img">
+                <img src="/static/images/bann.png" alt="" />
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <h3>
+                Fair Labour <br />
+                
+              </h3>
+              <p>
+                Our executives are well educated, polite, friendly and driven by the passion for customer service.
+                 They are well trained on work ethics and customer relations. 
+                Recycling is made easy, please support the cause.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="shop_container">
+          <div class="row">
+            <div class="col-sm-6">
+              
+              <h3>
+                Accurate Weight
+              </h3>
+              <p>
+                Customers who sell their scrap ,Lucknow kabadiwala can rely to get a trustworthy price for 
+                all the scrap materials sold. To keep our customer peace of mind we use superior quality 
+                digital weighing machine. Running out of cash, sell your trash.
+              </p>
+            </div>
+            <div class="col-sm-6">
+              <div class="shoe_img-box">
+                <img src="/static/images/weight.png" alt="" />
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="find_container">
+          <div class="row">
+            <div class="col-sm-6">
+              <div class="find_container-img">
+                <img src="/static/images/payment.png" alt="" />
+              </div>
+            </div>
+            <div class="col-sm-6">
+              <h3>
+                Instant Payment <br />
+                
+              </h3>
+              <p>
+                Lucknow kabadiwala offers comfort and flexibility to our customers by providing doorstep
+                 pickup service and also Instant payment for their old junk. Join hands to reduce landfills.
+              </p>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+      <div class="col-md-4">
+        <div class="find_img-box">
+          <img src="/static/images/girl.png" alt="" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- end Why Lucknow Kabadiwala section -->
+
+
+
+<!-- Media start -->
+<div class="pa-blog spacer-top spacer-bottom">
+  <div class="container">
+      <div class="pa-heading">
+
+          <h1><b>Media Recognitions</b></h1>
+          <h5>Appreciated By</h5>
+      </div>
+      <div class="row">
+          <div class="col-lg-4 col-md-6">
+              <div class="pa-blog-box">
+                  <img src="/static/images/hindustan.png" alt="image" class="img-fluid" id="news">
+                  <div class="pa-blog-title">
+                      <a  class="pa-blog-category">Hindustan Times</a>
+                      <h2><a href="https://www.hindustantimes.com/india-news/lucknow-engineer-turns-kabadiwala-in-online-avatar-with-app-to-sell-scrap-101616568722524.html" style="color:#04771d">
+                        Lucknow engineer turns ‘kabadiwala’ in online avatar with app to sell scrap</a></h2>
+                      <a  class="pa-blog-date">24 March, 2021</a>
+                  </div>
+                  
+              </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+              <div class="pa-blog-box">
+                  <img src="/static/images/better.png" alt="image" class="img-fluid" id="news">
+                  <div class="pa-blog-title">
+                      <a  class="pa-blog-category">Better India</a>
+                      <h2><a href="https://hindi.thebetterindia.com/68781/civil-engineer-left-job-to-start-his-own-startup-lucknow-kabadiwala-during-lockdown-business-idea-india/" style="color:#04771d">
+                          सिविल इंजीनियर ने नौकरी छोड़कर अपना स्टार्टअप, ‘लखनऊ कबाड़ीवाला’ शुरू किया।</a></h2>
+                      <a  class="pa-blog-date">20 March, 2020</a>
+                  </div>
+                  
+              </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+              <div class="pa-blog-box">
+                  <img src="/static/images/amarujala.png" alt="image" class="img-fluid" id="news">
+                  <div class="pa-blog-title">
+                      <a  class="pa-blog-category">Amar Ujala</a>
+                      <h2><a href="https://www.amarujala.com/lucknow/two-engineer-friends-start-junk-business-during-lockdown-in-lucknow" style="color:#04771d" >
+                        चुनौती से दो-दो हाथः दो इंजीनियर दोस्तों ने कबाड़ को बना लिया रोजगार</a></h2>
+                      <a  class="pa-blog-date">20 March, 2020</a>
+                  </div>
+                  
+              </div>
+          </div>
+      </div>
+  </div>
+</div>
+<!-- Media end -->
+
+
+  <!-- client section -->
+  <section class="client_section layout_padding">
+    <div class="container">
+      <h2>
+        What our Customer says
+      </h2>
+      <div id="carouselExample2Controls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="row layout_padding2">
+              <div class="col-md-12">
+                <div class="client_box">
+                  <div class="client_id-box" >
+                    <div class="client_img-box">
+                      <img src="/static/images/sachin.png" alt="" />
+                    </div>
+                    
+                  </div>
+                  <h4 style="text-align: center;"><b>Sachin Yadav</b></h4>
+                  <div class="client_detail">
+                    
+                    <p>
+                      There are many variations of passages of Lorem Ipsum
+                      available, but the majority have suffered alteration in some
+                      form, by injected humour, or randomised words which don't look
+                      even slightly believable. If you are going to use a passage of
+                      Lorem Ipsum, you need to be sure there isn't anything
+                      embarrassing hidden in the middle of text.
+                      
+                    </p>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row layout_padding2">
+              <div class="col-md-12">
+                <div class="client_box">
+                  <div class="client_id-box">
+                    <div class="client_img-box">
+                      <img src="/static/images/arun.png" alt="" />
+                    </div>
+                    
+                  </div>
+                  <h4 style="text-align: center;"><b>Arun Prajapati</b></h4>
+                  <div class="client_detail">
+                    <p>
+                      There are many variations of passages of Lorem Ipsum
+                      available, but the majority have suffered alteration in some
+                      form, by injected humour, or randomised words which don't look
+                      even slightly believable. If you are going to use a passage of
+                      Lorem Ipsum, you need to be sure there isn't anything
+                      embarrassing hidden in the middle of text.
+                      
+                    </p>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row layout_padding2">
+              <div class="col-md-12">
+                <div class="client_box">
+                  <div class="client_id-box">
+                    <div class="client_img-box">
+                      <img src="/static/images/client.png" alt="" />
+                    </div>
+                    
+                  </div>
+                  <h4 style="text-align: center;"><b>Carlac liyo</b></h4>
+                  <div class="client_detail">
+                    <p>
+                      There are many variations of passages of Lorem Ipsum
+                      available, but the majority have suffered alteration in some
+                      form, by injected humour, or randomised words which don't look
+                      even slightly believable. If you are going to use a passage of
+                      Lorem Ipsum, you need to be sure there isn't anything
+                      embarrassing hidden in the middle of text.
+                      
+                    </p>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+
+          <div class="carousel-item">
+            <div class="row layout_padding2">
+              <div class="col-md-12">
+                <div class="client_box">
+                  <div class="client_id-box">
+                    <div class="client_img-box">
+                      <img src="/static/images/client.png" alt="" />
+                    </div>
+                    
+                  </div>
+                  <h4 style="text-align: center;"><b>Carlac liyo</b></h4>
+                  <div class="client_detail">
+                    <p>
+                      There are many variations of passages of Lorem Ipsum
+                      available, but the majority have suffered alteration in some
+                      form, by injected humour, or randomised words which don't look
+                      even slightly believable. If you are going to use a passage of
+                      Lorem Ipsum, you need to be sure there isn't anything
+                      embarrassing hidden in the middle of text.
+                      
+                    </p>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+
+
+          <div class="carousel-item">
+            <div class="row layout_padding2">
+              <div class="col-md-12">
+                <div class="client_box">
+                  <div class="client_id-box">
+                    <div class="client_img-box">
+                      <img src="/static/images/client.png" alt="" />
+                    </div>
+                    
+                  </div>
+                  <h4 style="text-align: center;"><b>Carlac liyo</b></h4>
+                  <div class="client_detail">
+                    <p>
+                      There are many variations of passages of Lorem Ipsum
+                      available, but the majority have suffered alteration in some
+                      form, by injected humour, or randomised words which don't look
+                      even slightly believable. If you are going to use a passage of
+                      Lorem Ipsum, you need to be sure there isn't anything
+                      embarrassing hidden in the middle of text.
+                      
+                    </p>
+                  </div>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+
+        </div>
+        <a class="carousel-control-prev" href="#carouselExample2Controls" role="button" data-slide="prev">
+
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExample2Controls" role="button" data-slide="next">
+
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+
+    </div>
+    <div class="container">
+      <div class="item_container">
+        <div class="row">
+          <div class="col-sm-7">
+            <h3>
+              <b>Now it's easy to sell junk</b>
+            </h3>
+            <p style="color: #04771d;">
+              Lucknow kabadiwala is All-in-One solution for scrap sales at your door step. 
+              Our aim is to give you the hassle-free solution for scrap sales where
+               you can contact us online by filling a simple form to schedule your pickup.
+            </p>
+            <div>
+              <a href="contact/">
+               <b> Sell Now</b>
+              </a>
+            </div>
+          </div>
+          <div class="col-sm-5">
+            <div class="item_img-box">
+              <img src="/static/images/scrap.png" alt="" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end client section -->
+
+  
+
+
+  <!-- end info section -->
+
+  {% endblock %}

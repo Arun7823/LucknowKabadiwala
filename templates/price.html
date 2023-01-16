@@ -1,0 +1,81 @@
+{% include 'header.html' %}
+</div>
+
+  <!-- products section -->
+  
+  <section class='feature-area setion-gap  ' id='service'>
+    <div class='container ' style='text-align:center'>
+      <div class='row d-flex justify-content-center'>
+        <div class='menu-content pb-60 col-lg-g'>
+          <div class='title text-center'>
+            <h1 class='mb-10' >User Form</h1>
+  
+          </div>
+        </div>
+        
+      </div>
+      <br>
+      <br>
+      <br>
+
+      
+
+      <h2 style='color:#ec4045;'>
+        
+        
+        <b>Scrap Store</b>
+      </h2>
+      <form method='get'>
+        <input type='text' name='productname' value=''/>
+        <input type='submit' value='Search'/>
+      </form>
+  <b style='color:#0e4706;'><p>
+        Price Card
+      </p></b>
+    
+    
+    
+    <div class="container layout_padding">
+      <div class="product_container">
+        {% for n in productData %}
+        <a >
+          
+          <div class="product_box">
+            
+            <div class="product_img-box">
+              <img src="/media/{{n.product_img}}" alt="" />
+              
+            </div>
+            <div class="product_detail-box">
+              <span style="color: black;" ><b>{{n.product_name}}</b></span>
+              </div>
+              <span style="color: #04771d;">
+                <b>{{ n.product_price }}</b>
+                
+              </span>
+              
+              
+          </div>
+          
+        </a>
+        {% empty %}
+              No Record Found
+        {%  endfor  %}
+        
+        
+      </div>
+      
+        
+    
+    
+    </div>
+    
+  </section>
+
+  <!-- end products section -->
+  
+  
+
+  
+
+  {% include 'footer.html' %}
